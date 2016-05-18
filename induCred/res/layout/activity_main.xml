@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.inducred.MainActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text"
+        android:layout_alignParentTop="true"
+        android:text="SSID:"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:text="SSID"
+        android:textColor="@color/text"
+        android:textSize="24dp" />
+
+    <EditText
+        android:id="@+id/tvPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_toLeftOf="@+id/bErase"
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvPassword"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="17dp"
+        android:text="Password:"
+        android:textColor="@color/text"
+        android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/bAbort"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bStart"
+        android:layout_below="@+id/bStart"
+        android:layout_marginTop="48dp"
+        android:onClick="abort"
+        android:text="ABORT"
+        android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/bErase"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvPassword"
+        android:layout_alignParentRight="true"
+        android:onClick="erasePassword"
+        android:text="X" />
+
+    <Button
+        android:id="@+id/bSave"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvPassword"
+        android:layout_alignRight="@+id/bErase"
+        android:layout_below="@+id/tvPassword"
+        android:layout_marginTop="24dp"
+        android:onClick="savePassword"
+        android:text="save password"
+        android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/bStart"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bSave"
+        android:layout_below="@+id/bSave"
+        android:layout_marginTop="34dp"
+        android:onClick="startButton"
+        android:text="START"
+        android:textSize="24dp" />
+
+</RelativeLayout>
